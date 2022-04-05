@@ -4,7 +4,15 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+},
+  {
+    path: '',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+},
+{
+  path: 'tab1',
+  loadChildren: () => import('./tab1/tab1.module').then( m => m.Tab1PageModule)
 },
 {
   path: 'tabjob',
@@ -13,7 +21,16 @@ const routes: Routes = [
 {
   path: 'tabnotif',
   loadChildren: () => import('./tabnotif/tabnotif.module').then( m => m.TabnotifPageModule)
-}
+},
+  {
+    path: 'post',
+    loadChildren: () => import('./post/post.module').then( m => m.PostPageModule)
+  },
+  {
+    path: 'tweet',
+    loadChildren: () => import('./components/shared-components.module').then( m => m.SharedComponentsModule)
+  },
+
 ];
 @NgModule({
   imports: [

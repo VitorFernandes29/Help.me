@@ -1,17 +1,146 @@
-<ion-header [translucent]="true">
+<ion-header #header>
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button tab="menu">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+        <ion-title>
+          <img src="assets/img/Logo_H4.png"/>
+        </ion-title>
+    <ion-buttons slot="end">
+      <ion-button tab="tabnotif" href="tabnotif">
+        <ion-icon slot="icon-only" name="chatbubbles"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+    <ion-card>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-row class="ion-justify-content-start">
+           <ion-card-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+          <ion-col class="avatar">
+            <ion-title>
+              <ion-avatar>
+                <img class="avatar" src="assets/img/Panini.jpg"/>
+              </ion-avatar>
+            </ion-title>
+          </ion-col>
+
+          </ion-card-header>
+
+        <ion-col>
+          <ion-card-title>Luan Panini
+            <ion-card-subtitle>Desenvolvedor Back-End</ion-card-subtitle>
+            <ion-card-subtitle>Santa Barbara D'Oeste</ion-card-subtitle>
+          </ion-card-title>
+
+        </ion-col>
+
+      </ion-row>
+
+
+          <ion-card-content class="ion-margin-top">
+           Especialista em Back-End<br/>
+            <img src="assets/img/job.jpg"/>
+          </ion-card-content>
+
+
+
+        <ion-col class="md hydrated">
+
+            <ion-chip>
+              <ion-icon name="thumbs-up" color="primary"></ion-icon>
+                <ion-label color="primary"></ion-label>
+            </ion-chip>
+
+            <ion-chip>
+               <ion-icon name="chatbubble-ellipses"color="primary"></ion-icon>
+                <ion-label color="primary"></ion-label>
+            </ion-chip>
+
+            <ion-chip>
+               <ion-icon name="warning" color="primary"></ion-icon>
+                <ion-label color="primary"></ion-label>
+            </ion-chip>
+
+            <ion-chip>
+              <ion-icon name="paper-plane" color="primary"></ion-icon>
+               <ion-label color="primary"></ion-label>
+            </ion-chip>
+
+            <ion-chip>
+              <ion-icon name="person-add" color="primary"></ion-icon>
+               <ion-label color="primary"></ion-label>
+            </ion-chip>
+
+
+        </ion-col>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-row class="ion-justify-content-start">
+        <ion-card-header>
+
+          <ion-col class="avatar">
+            <ion-title>
+              <ion-avatar>
+                <img class="avatar" src="assets/img/looh.jpg"/>
+              </ion-avatar>
+            </ion-title>
+          </ion-col>
+        </ion-card-header>
+
+          <ion-col>
+            <ion-card-title>Lorrayne Panini
+              <ion-card-subtitle>Especialista Departamento Pessoal</ion-card-subtitle>
+               <ion-card-subtitle>Americana</ion-card-subtitle>
+              </ion-card-title>
+          </ion-col>
+
+      </ion-row>
+
+
+        <ion-card-content class="ion-margin-top">
+          Especialista Departamento Pessoal<br/>
+            <img src="assets/img/DP.jpg"/>
+        </ion-card-content>
+
+
+
+        <ion-col class="md hydrated">
+
+          <ion-chip>
+              <ion-icon name="thumbs-up" color="primary"></ion-icon>
+              <ion-label color="primary"></ion-label>
+          </ion-chip>
+
+          <ion-chip>
+              <ion-icon name="chatbubble-ellipses"color="primary"></ion-icon>
+              <ion-label color="primary"></ion-label>
+          </ion-chip>
+
+          <ion-chip>
+            <ion-icon name="warning" color="primary"></ion-icon>
+            <ion-label color="primary"></ion-label>
+          </ion-chip>
+
+          <ion-chip>
+            <ion-icon name="paper-plane" color="primary"></ion-icon>
+            <ion-label color="primary"></ion-label>
+          </ion-chip>
+
+          <ion-chip>
+            <ion-icon name="person-add" color="primary"></ion-icon>
+            <ion-label color="primary"></ion-label>
+          </ion-chip>
+
+        </ion-col>
+
+    </ion-card>
 </ion-content>

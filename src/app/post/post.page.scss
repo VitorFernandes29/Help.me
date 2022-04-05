@@ -4,15 +4,28 @@
 .hydrated{
   align-items: center;
 }
-
-ion-icon{
+ion-buttons{
+  color:#b19cd9 ;
+  left: auto;
   align-items: center;
+ }
+ion-icon{
+  align-items: flex-end;
+}
+.post{
+  height: 150px;
+  align-items:flex-start;
+}
+ion-chip{
+
+  background:top ;
+
+}
+.icon{
+  direction:rtl;
 }
 ion-toolbar {
   --border-style: none;
   align-items:  center;
   text-align: center;
 }
-ion-buttons{
-  color:#b19cd9 ;
- }

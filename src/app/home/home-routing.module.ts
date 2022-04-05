@@ -17,8 +17,8 @@ const routes: Routes = [
         loadChildren: () => import('../tabjob/tabjob.module').then(m => m.TabjobPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'post',
+        loadChildren: () => import('../post/post.module').then(m => m.PostPageModule)
       },
       {
         path: 'tab3',
@@ -47,3 +47,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class HomePageRoutingModule {}
+

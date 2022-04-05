@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
@@ -13,7 +15,10 @@ import { TabnotifPage } from './tabnotif.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    TabnotifPageRoutingModule
+    TabnotifPageRoutingModule,
+    ExploreContainerComponentModule,
+    RouterModule
+
   ],
   declarations: [TabnotifPage]
 })

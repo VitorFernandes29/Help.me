@@ -1,0 +1,128 @@
+<ion-header #header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button tab="menu">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+        <ion-title>
+          <img src="assets/img/Logo_H4.png"/>
+        </ion-title>
+    <ion-buttons slot="end">
+      <ion-button tab="tabnotif">
+        <ion-icon slot="icon-only" name="chatbubbles"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-row class="ion-justify-content-start">
+       <ion-card-header>
+
+        <ion-col class="avatar">
+
+          <ion-avatar>
+            <img class="avatar" src="assets/img/Panini.jpg"/>
+          </ion-avatar>
+
+        </ion-col>
+      </ion-card-header>
+
+        <ion-col>
+            <ion-card-title>
+              <h4>Luan Panini</h4>
+            </ion-card-title>
+              <ion-card-subtitle>Desenvolvedor Back-End</ion-card-subtitle>
+              <ion-card-subtitle>Santa Barbara D'Oeste</ion-card-subtitle>
+        </ion-col>
+
+    </ion-row>
+
+      <ion-card>
+        <ion-row>
+    <ion-col>
+      <ion-text>
+        <ion-label position="floating">O que você precisa?</ion-label>
+        <ion-input class="post"></ion-input>
+
+      </ion-text>
+    </ion-col>
+        </ion-row>
+      </ion-card>
+
+
+    <ion-row class="icon">
+
+      <ion-chip>
+        <ion-icon name="trash" color="primary"></ion-icon>
+        <ion-label color="primary">Descartar</ion-label>
+      </ion-chip>
+
+      <ion-chip>
+        <ion-icon name="paper-plane" color="primary"></ion-icon>
+        <ion-label color="primary">Publicar</ion-label>
+      </ion-chip>
+
+    </ion-row>
+
+
+
+    <ion-list inset="true">
+    <div class="inserir">
+      <ion-accordion-group value="colors">
+        <ion-accordion value="colors">
+          <ion-item slot="header">
+            <ion-label>Inserir</ion-label>
+          </ion-item>
+
+          <ion-list slot="content">
+          <ion-item>
+            <ion-col class="avatar">
+
+              <ion-chip>
+                <ion-icon name="camera" color="primary"></ion-icon>
+                <ion-label>Camera</ion-label>
+              </ion-chip>
+            </ion-col>
+          </ion-item>
+
+          <ion-item>
+            <ion-chip>
+              <ion-icon name="happy" color="primary"></ion-icon>
+              <ion-label>Sentimento</ion-label>
+            </ion-chip>
+          </ion-item>
+
+          <ion-item>
+            <ion-chip>
+              <ion-icon name="earth" color="primary"></ion-icon>
+              <ion-label>Localização</ion-label>
+            </ion-chip>
+          </ion-item>
+
+          <ion-item>
+            <ion-chip>
+              <ion-icon name="images" color="primary"></ion-icon>
+              <ion-label>Foto/video</ion-label>
+            </ion-chip>
+          </ion-item>
+
+          <ion-item>
+            <ion-chip>
+              <ion-icon name="people" color="primary"></ion-icon>
+              <ion-label>Marcar</ion-label>
+            </ion-chip>
+          </ion-item>
+
+          </ion-list>
+        </ion-accordion>
+     </ion-accordion-group>
+    </div>
+    </ion-list>
+
+  </ion-card>
+</ion-content>
