@@ -29,7 +29,11 @@ const routes: Routes = [
   {
     path: 'tweet',
     loadChildren: () => import('./components/shared-components.module').then( m => m.SharedComponentsModule)
+  },  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+
 
 ];
 @NgModule({
