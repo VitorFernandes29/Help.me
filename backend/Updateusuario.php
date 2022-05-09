@@ -10,9 +10,10 @@ $senha = $data['senha'];
 $email = $data['email'];
 $nasc = $data['nasc'];
 $genero = $data['genero'];
+$id_usuario = $_GET['id_usuario'];
 
-$q = mysqli_query($con, "INSERT INTO 'usuario' ('nome', 'cpf','nasc', 'genero', 'email', 'senha')
-                          VALUES ('$nome', '$cpf', '$nasc', '$genero', '$email', '$senha')");
+$q = mysqli_query($con, "UPDATE 'usuario' SET ('nome', 'cpf','nasc', 'genero', 'email', 'senha')
+VALUES ('$nome', '$cpf', '$nasc', '$genero', '$email', '$senha') WHERE 'id_usuario' = {$id_usuario} LIMIT 1");
 
 if($q) {
   http_response_code(201);
