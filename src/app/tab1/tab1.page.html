@@ -1,31 +1,28 @@
 <ion-header #header>
   <ion-toolbar>
+    <ion-title></ion-title>
     <ion-buttons slot="start">
-      <ion-button href="menu">
-        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
-      </ion-button>
+      <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
 
         <ion-title>
           <img src="assets/img/Logo_H4.png"/>
         </ion-title>
     <ion-buttons slot="end">
-      <ion-button tab="tabnotif" href="tabnotif">
-        <ion-icon slot="icon-only" name="chatbubbles"></ion-icon>
+      <ion-button href="config">
+        <ion-icon slot="icon-only" name="cog"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-  <ion-searchbar class="pesquisar"></ion-searchbar>
 </ion-header>
 
 
 
 <ion-content [fullscreen]="true" scrollEvents="true">
 
-
-
       <div *ngIf="segment === 'home'">
         <app-tweet *ngFor="let tweet of tweets" [tweet]="tweet"></app-tweet>
       </div>
 
 </ion-content>
+

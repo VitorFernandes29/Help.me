@@ -9,7 +9,7 @@ $q = mysqli_query($con, "DELETE * FROM 'usuario' WHERE 'id_usuario' = $id_usuari
 
 if($q) {
   http_response_code(201);
-  $message['status'] = "Successo";
+  $message['status'] = "Success";
 }else{
   http_response_code(422);
   $message['status'] = "Erro";

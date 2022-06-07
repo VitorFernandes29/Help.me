@@ -1,10 +1,10 @@
 <?php
 include "config.php";
 $data = array();
-$q = mysqli_query($con, "SELECT * FROM 'usuario'")
+$q = mysqli_query($con, "SELECT * FROM 'usuario'");
 
 while ($row = mysqli_fetch_object($q)){
-    $data[] = $row;
+  $data[] = $row;
 }
 
 echo json_encode($data);
