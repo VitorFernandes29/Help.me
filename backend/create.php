@@ -16,7 +16,7 @@ $q = mysqli_query($con, "INSERT INTO 'usuario' ('nome', 'cpf','nasc', 'genero', 
 
 if($q) {
   http_response_code(201);
-  $message['status'] = "Successo";
+  $message['status'] = "Sucess";
 }else{
   http_response_code(422);
   $message['status'] = "Erro";

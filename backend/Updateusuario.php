@@ -17,7 +17,7 @@ VALUES ('$nome', '$cpf', '$nasc', '$genero', '$email', '$senha') WHERE 'id_usuar
 
 if($q) {
   http_response_code(201);
-  $message['status'] = "Successo";
+  $message['status'] = "Success";
 }else{
   http_response_code(422);
   $message['status'] = "Erro";

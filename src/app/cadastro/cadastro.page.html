@@ -34,21 +34,21 @@
 
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Nome</ion-label>
-          <ion-input [(ngModel)]="nome" type="text" required></ion-input>
+
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Digite o CPF</ion-label>
-          <ion-input [(ngModel)]="cpf" type="text" name="CPF" required></ion-input>
+
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label>Data de nascmento:</ion-label>
-          <ion-input [(ngModel)]="nasc" type="date"></ion-input>
+
         </ion-item>
 
         <ion-item class="ion-margin-top">
-          <ion-input [(ngModel)]="interesse" type="text" slot="end" required></ion-input>
+
           <ion-select placeholder="Interesses">
             <ion-select-option value="Administrador">Administrador</ion-select-option>
             <ion-select-option value="Advogado">Advogado</ion-select-option>
@@ -80,8 +80,10 @@
           </ion-select>
         </ion-item>
 
+
+
         <ion-item class="ion-margin-top">
-          <ion-input [(ngModel)]="genero" type="text" slot="end" required></ion-input>
+
           <ion-select placeholder="Genero">
             <ion-select-option value="f">Mulher</ion-select-option>
             <ion-select-option value="m">Homem</ion-select-option>
@@ -89,23 +91,25 @@
           </ion-select>
         </ion-item>
 
+
+
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Email</ion-label>
-          <ion-input [(ngModel)]="email" type="text" required></ion-input>
+
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Senha</ion-label>
-          <ion-input [(ngModel)]="senha" type="text" required></ion-input>
+
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Confirme a senha</ion-label>
-          <ion-input  type="text" required></ion-input>
+          <ion-input  type="password" required></ion-input>
         </ion-item>
 
         <br> <br>
-        <ion-button id="btn" type="submit" expand="block" fill="solid" shape="around">
+        <ion-button type="button" expand="block" fill="solid" shape="around" >
           Criar conta Helpme
         </ion-button>
 
@@ -153,21 +157,23 @@
 
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Nome da empresa</ion-label>
-          <ion-input type="text" required></ion-input>
+
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Digite o CNPJ</ion-label>
-          <ion-input type="text" name="CNPJ" title="Digite um CPF no formato: xxx.xxx.xxx-xx"></ion-input>
+
+          <ion-input type="number" name="CNPJ" title="Digite um CNPJ no formato: xxx.xxx.xxx-xx"></ion-input>
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label>Criação da Empresa:</ion-label>
-          <ion-input id="date" type="date"></ion-input>
+
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-select placeholder="Trabalho">
+
             <ion-select-option value="Administrador">Administrador</ion-select-option>
             <ion-select-option value="Advogado">Advogado</ion-select-option>
             <ion-select-option value="Barbeiro">Barbeiro</ion-select-option>
@@ -200,21 +206,21 @@
 
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Email</ion-label>
-          <ion-input></ion-input>
+
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Senha</ion-label>
-          <ion-input  type="text" required></ion-input>
+
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label position="floating">Confirme a senha</ion-label>
-          <ion-input  type="text" required></ion-input>
+          <ion-input  type="password" required></ion-input>
         </ion-item>
 
         <br> <br>
-        <ion-button type="button" (click)="addUsuario()" expand="block" fill="solid" shape="around" >
+        <ion-button type="button" expand="block" fill="solid" shape="around" >
           Criar conta Help me
         </ion-button>
 
