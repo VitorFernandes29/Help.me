@@ -6,7 +6,7 @@ ion-title {
     height: 80%;
 
     .slide-inner {
-        width: 60%;
+        width: 80%;
         color: rgb(0, 0, 0);
         background-color: #ffffffbb;
         border-radius: 10px;
@@ -57,7 +57,6 @@ ion-title {
     cursor .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid;
     font-size: small;
   }
 
