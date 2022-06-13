@@ -6,7 +6,7 @@
 
 <ion-content id="box" >
 
-    <ion-slide value="pessoa fisica" id='scroll'>
+    <ion-slide value="pessoa fisica">
       <div class="slide-inner ion-padding">
         <br> <br> <br> <br><br> <br> <br>  <br> <br> <br> <br> <br> <br>  <br> <br> <br> <br>
 
@@ -16,92 +16,49 @@
 <form #f="ngForm"(ngSubmit)="enviando(f)">
 
         <ion-item class="ion-margin-top">
-          <ion-label position="floating" required>Nome</ion-label>
+          <ion-label position="floating" required>Nome:</ion-label>
           <ion-input type="text" [(ngModel)]="dados.nome" name="nome"></ion-input>
         </ion-item>
 
         <ion-item class="ion-margin-top">
-          <ion-label position="floating" required>Digite o CPF / CNPJ</ion-label>
+          <ion-label position="floating" required>Digite o CPF / CNPJ:</ion-label>
           <ion-input type="" [(ngModel)]="dados.cpf" name="cpf"></ion-input>
-
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label>Data de nascmento:</ion-label>
           <ion-input type="date" [(ngModel)]="dados.nasc" name="nasc"></ion-input>
-
         </ion-item>
 
         <ion-item class="ion-margin-top">
-
-          <ion-select placeholder="Interesses">
-            <ion-select-option value="Administrador">Administrador</ion-select-option>
-            <ion-select-option value="Advogado">Advogado</ion-select-option>
-            <ion-select-option value="Barbeiro">Barbeiro</ion-select-option>
-            <ion-select-option value="Cabelereiro">Cabelereiro</ion-select-option>
-            <ion-select-option value="Chaveiro">Chaveiro</ion-select-option>
-            <ion-select-option value="Contador">Contador</ion-select-option>
-            <ion-select-option value="Corretor">Corretor de Imóveis</ion-select-option>
-            <ion-select-option value="Cozinheira">Cozinheira</ion-select-option>
-            <ion-select-option value="desenvolvedor">Desenvolvedor de Sistema</ion-select-option>
-            <ion-select-option value="Educador">Educador</ion-select-option>
-            <ion-select-option value="Enfermeiro">Enfermeiro</ion-select-option>
-            <ion-select-option value="Engenheiro">Engenheiro</ion-select-option>
-            <ion-select-option value="Eletricista">Eletricista</ion-select-option>
-            <ion-select-option value="Esteticista">Esteticista</ion-select-option>
-            <ion-select-option value="Frete">Frete</ion-select-option>
-            <ion-select-option value="Interprete">Interprete</ion-select-option>
-            <ion-select-option value="Jardineiro">Jardineiro</ion-select-option>
-            <ion-select-option value="Lavador">Lavador de Autos</ion-select-option>
-            <ion-select-option value="Libras">Libras</ion-select-option>
-            <ion-select-option value="Maquiador">Maquiadora</ion-select-option>
-            <ion-select-option value="Manicure">Manicure</ion-select-option>
-            <ion-select-option value="Massagista">Massagista</ion-select-option>
-            <ion-select-option value="Mecânico">Mecânico</ion-select-option>
-            <ion-select-option value="Pedreiro">Pedreiro</ion-select-option>
-            <ion-select-option value="Podóloga">Podóloga</ion-select-option>
-            <ion-select-option value="Publicitario">Publicitário</ion-select-option>
-            <ion-select-option value="Veterinario">Veterinário</ion-select-option>
-          </ion-select>
+          <ion-label position="floating" required>Area de Interesse:</ion-label>
           <ion-input type="text" [(ngModel)]="dados.interesse" name="interesse"></ion-input>
         </ion-item>
 
-
-
         <ion-item class="ion-margin-top">
-
-          <ion-select placeholder="Genero">
-            <ion-select-option value="f">Feminino</ion-select-option>
-            <ion-select-option value="m">Masculino</ion-select-option>
-            <ion-select-option value="p">Nenhuma das alternativas</ion-select-option>
-          </ion-select>
+          <ion-label position="floating" required9>Genero</ion-label>
           <ion-input type="text" [(ngModel)]="dados.genero" name="genero"></ion-input>
         </ion-item>
 
-
-
         <ion-item class="ion-margin-top">
-          <ion-label position="floating" required>Email</ion-label>
+          <ion-label position="floating" required>Email:</ion-label>
           <ion-input type="email" [(ngModel)]="dados.email" name="email"></ion-input>
         </ion-item>
 
         <ion-item class="ion-margin-top">
-          <ion-label position="floating" required>Senha</ion-label>
+          <ion-label position="floating" required>Senha:</ion-label>
           <ion-input type="password" [(ngModel)]="dados.senha" name="senha"></ion-input>
 
         </ion-item>
 
         <ion-item class="ion-margin-top">
-          <ion-label position="floating">Confirme a senha</ion-label>
+          <ion-label position="floating">Confirme a senha:</ion-label>
           <ion-input  type="password" required></ion-input>
         </ion-item>
 
         <ion-button href="home/tab1" fill="outline" expand="block" type="submit">{{atualizar ? 'Atualizar Cliente' : ' Criar conta Helpme'}}</ion-button>
 
         <br> <br>
-        <ion-button type="button" expand="block" fill="solid" shape="around" >
-          Criar conta Helpme
-        </ion-button>
       </form>
         <ion-footer class="ion-margin-center">
 
@@ -119,114 +76,6 @@
   <br>
   <br>
   <br>
-  <br>
-    <ion-slide value="pessoa juridica" id='scroll'>
-      <div class="slide-inner ion-padding">
-        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-        <h1 class="title2">Pessoa Jurídica</h1>
-
-        <div>
-          <ion-fab vertical="left" horizontal="end" slot="fixed" margin-left="20px">
-            <ion-fab-button>
-              <ion-icon name="cube-outline"></ion-icon>
-            </ion-fab-button>
-
-            <ion-fab-list side="top">
-              <ion-fab-button href="#"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
-            </ion-fab-list>
-
-            <ion-fab-list side="start">
-              <ion-fab-button href="#"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
-            </ion-fab-list>
-
-            <ion-fab-list side="button">
-              <ion-fab-button href="#"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
-            </ion-fab-list>
-          </ion-fab>
-      </div>
-
-        <ion-item class="ion-margin-top">
-          <ion-label position="floating">Nome da empresa</ion-label>
-
-        </ion-item>
-
-        <ion-item class="ion-margin-top">
-          <ion-label position="floating">Digite o CNPJ</ion-label>
-
-          <ion-input type="number" name="CNPJ" title="Digite um CNPJ no formato: xxx.xxx.xxx-xx"></ion-input>
-        </ion-item>
-
-        <ion-item class="ion-margin-top">
-          <ion-label>Criação da Empresa:</ion-label>
-
-        </ion-item>
-
-        <ion-item class="ion-margin-top">
-          <ion-select placeholder="Trabalho">
-
-            <ion-select-option value="Administrador">Administrador</ion-select-option>
-            <ion-select-option value="Advogado">Advogado</ion-select-option>
-            <ion-select-option value="Barbeiro">Barbeiro</ion-select-option>
-            <ion-select-option value="Cabelereiro">Cabelereiro</ion-select-option>
-            <ion-select-option value="Chaveiro">Chaveiro</ion-select-option>
-            <ion-select-option value="Contador">Contador</ion-select-option>
-            <ion-select-option value="Corretor">Corretor de Imóveis</ion-select-option>
-            <ion-select-option value="Cozinheira">Cozinheira</ion-select-option>
-            <ion-select-option value="desenvolvedor">Desenvolvedor de Sistema</ion-select-option>
-            <ion-select-option value="Educador">Educador</ion-select-option>
-            <ion-select-option value="Enfermeiro">Enfermeiro</ion-select-option>
-            <ion-select-option value="Engenheiro">Engenheiro</ion-select-option>
-            <ion-select-option value="Eletricista">Eletricista</ion-select-option>
-            <ion-select-option value="Esteticista">Esteticista</ion-select-option>
-            <ion-select-option value="Frete">Frete</ion-select-option>
-            <ion-select-option value="Interprete">Interprete</ion-select-option>
-            <ion-select-option value="Jardineiro">Jardineiro</ion-select-option>
-            <ion-select-option value="Lavador">Lavador de Autos</ion-select-option>
-            <ion-select-option value="Libras">Libras</ion-select-option>
-            <ion-select-option value="Maquiador">Maquiadora</ion-select-option>
-            <ion-select-option value="Manicure">Manicure</ion-select-option>
-            <ion-select-option value="Massagista">Massagista</ion-select-option>
-            <ion-select-option value="Mecânico">Mecânico</ion-select-option>
-            <ion-select-option value="Pedreiro">Pedreiro</ion-select-option>
-            <ion-select-option value="Podóloga">Podóloga</ion-select-option>
-            <ion-select-option value="Publicitario">Publicitário</ion-select-option>
-            <ion-select-option value="Veterinario">Veterinário</ion-select-option>
-          </ion-select>
-        </ion-item>
-
-        <ion-item class="ion-margin-top">
-          <ion-label position="floating">Email</ion-label>
-
-        </ion-item>
-
-        <ion-item class="ion-margin-top">
-          <ion-label position="floating">Senha</ion-label>
-
-        </ion-item>
-
-        <ion-item class="ion-margin-top">
-          <ion-label position="floating">Confirme a senha</ion-label>
-          <ion-input  type="password" required></ion-input>
-        </ion-item>
-
-        <br> <br>
-        <ion-button type="button" expand="block" fill="solid" shape="around" >
-          Criar conta Help me
-        </ion-button>
-
-        <ion-footer class="ion-margin-center">
-          <br>
-          <p class="messagem">
-            Help.Me vai ajudar você a crescer seu empreendimento!
-          </p>
-          <p class="messagem">
-            CopyRight©2022
-          </p> <br> <br>
-        </ion-footer>
-      </div>
-    </ion-slide>
-
-
 </ion-content>
 
 
