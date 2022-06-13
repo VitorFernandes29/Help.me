@@ -4,46 +4,31 @@
   </ion-title>
 </ion-header>
 
-<ion-content id="box">
-  <ion-slides>
+<ion-content id="box" >
+
     <ion-slide value="pessoa fisica" id='scroll'>
       <div class="slide-inner ion-padding">
         <br> <br> <br> <br><br> <br> <br>  <br> <br> <br> <br> <br> <br>  <br> <br> <br> <br>
-        <h1 class="title">Pessoa Física</h1>
-        <p class="digitacao">É pessoa jurídica? Arraste para o lado!</p>
 
-        <div>
-          <ion-fab vertical="left" horizontal="end" slot="start" margin-left="20px">
-            <ion-fab-button>
-              <ion-icon name="cube-outline"></ion-icon>
-            </ion-fab-button>
 
-            <ion-fab-list side="top">
-              <ion-fab-button href="https://pt-br.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
-            </ion-fab-list>
+        <ion-title>{{atualizar ? 'Atualizar Cliente' : 'Novo Cliente'}}</ion-title>
 
-            <ion-fab-list side="start">
-              <ion-fab-button href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
-            </ion-fab-list>
-
-            <ion-fab-list side="button">
-              <ion-fab-button href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
-            </ion-fab-list>
-          </ion-fab>
-      </div>
+<form #f="ngForm"(ngSubmit)="enviando(f)">
 
         <ion-item class="ion-margin-top">
-          <ion-label position="floating">Nome</ion-label>
-
+          <ion-label position="floating" required>Nome</ion-label>
+          <ion-input type="text" [(ngModel)]="dados.nome" name="nome"></ion-input>
         </ion-item>
 
         <ion-item class="ion-margin-top">
-          <ion-label position="floating">Digite o CPF</ion-label>
+          <ion-label position="floating" required>Digite o CPF / CNPJ</ion-label>
+          <ion-input type="" [(ngModel)]="dados.cpf" name="cpf"></ion-input>
 
         </ion-item>
 
         <ion-item class="ion-margin-top">
           <ion-label>Data de nascmento:</ion-label>
+          <ion-input type="date" [(ngModel)]="dados.nasc" name="nasc"></ion-input>
 
         </ion-item>
 
@@ -78,6 +63,7 @@
             <ion-select-option value="Publicitario">Publicitário</ion-select-option>
             <ion-select-option value="Veterinario">Veterinário</ion-select-option>
           </ion-select>
+          <ion-input type="text" [(ngModel)]="dados.interesse" name="interesse"></ion-input>
         </ion-item>
 
 
@@ -85,21 +71,23 @@
         <ion-item class="ion-margin-top">
 
           <ion-select placeholder="Genero">
-            <ion-select-option value="f">Mulher</ion-select-option>
-            <ion-select-option value="m">Homem</ion-select-option>
-            <ion-select-option value="p">Nenhum</ion-select-option>
+            <ion-select-option value="f">Feminino</ion-select-option>
+            <ion-select-option value="m">Masculino</ion-select-option>
+            <ion-select-option value="p">Nenhuma das alternativas</ion-select-option>
           </ion-select>
+          <ion-input type="text" [(ngModel)]="dados.genero" name="genero"></ion-input>
         </ion-item>
 
 
 
         <ion-item class="ion-margin-top">
-          <ion-label position="floating">Email</ion-label>
-
+          <ion-label position="floating" required>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="dados.email" name="email"></ion-input>
         </ion-item>
 
         <ion-item class="ion-margin-top">
-          <ion-label position="floating">Senha</ion-label>
+          <ion-label position="floating" required>Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="dados.senha" name="senha"></ion-input>
 
         </ion-item>
 
@@ -108,11 +96,13 @@
           <ion-input  type="password" required></ion-input>
         </ion-item>
 
+        <ion-button href="home/tab1" fill="outline" expand="block" type="submit">{{atualizar ? 'Atualizar Cliente' : ' Criar conta Helpme'}}</ion-button>
+
         <br> <br>
         <ion-button type="button" expand="block" fill="solid" shape="around" >
           Criar conta Helpme
         </ion-button>
-
+      </form>
         <ion-footer class="ion-margin-center">
 
           <br>
@@ -235,7 +225,7 @@
         </ion-footer>
       </div>
     </ion-slide>
-  </ion-slides>
+
 
 </ion-content>
 
