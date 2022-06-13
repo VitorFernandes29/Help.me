@@ -22,7 +22,7 @@ export interface Usuario{
   providedIn: 'root'
 })
 export class UsuarioService {
-  private url = 'http://127.0.0.1:81/bd_helpme/usuario.php';
+  private url = 'http://127.0.0.1/helpme/usuario.php';
 
   constructor(
     public http: HttpClient
