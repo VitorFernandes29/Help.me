@@ -4,6 +4,7 @@
   </ion-title>
 </ion-header>
 
+
 <ion-content id="box" >
 
     <ion-slide value="pessoa fisica">
@@ -36,7 +37,7 @@
         </ion-item>
 
         <ion-item class="ion-margin-top">
-          <ion-label position="floating" required9>Genero</ion-label>
+          <ion-label position="floating" required9>Genero:</ion-label>
           <ion-input type="text" [(ngModel)]="dados.genero" name="genero"></ion-input>
         </ion-item>
 
@@ -56,7 +57,7 @@
           <ion-input  type="password" required></ion-input>
         </ion-item>
 
-        <ion-button href="home/tab1" fill="outline" expand="block" type="submit">{{atualizar ? 'Atualizar Cliente' : ' Criar conta Helpme'}}</ion-button>
+        <ion-button fill="outline" expand="block" type="submit">{{atualizar ? 'Atualizar Cliente' : ' Criar conta Helpme'}}</ion-button>
 
         <br> <br>
       </form>
