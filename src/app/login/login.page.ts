@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { AlertController, AlertOptions, NavController, NavParams } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { AlertController, NavController} from '@ionic/angular';
+
+import { Cliente, ClienteService } from '../servico/cliente.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,21 +11,28 @@ import { AlertController, AlertOptions, NavController, NavParams } from '@ionic/
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-  email: string;
-  senha: string;
+  @Input() c: Cliente;
+  dados = {
+    email: '',
+    senha:'',
+  };
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) { }
+  constructor(public navCtrl: NavController,
+           public alertCtrl: AlertController,
+           private service: ClienteService,
+           private route: Router) { }
 
+ // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
+   ngOnInit() {
+  }
   logar(){
-    // eslint-disable-next-line eqeqeq
-    if(this.email  == undefined || this.senha == undefined){
-      const alert = this.alertCtrl.create({
-
-        message: 'Preencha todos os campos!',
-        buttons: ['OK']
-      });
-
+    if(this.c.email && this.c.senha === this.dados.email && this.dados.senha){
+      this.route.navigateByUrl('/home');
+    }else{
+      this.route.navigateByUrl('/home');
     }
   }
-
+  logando(form: NgForm){
+    this.route.navigateByUrl('/home');
+}
 }

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InboxPageRoutingModule } from './inbox-routing.module';
+import { ConfigPageRoutingModule } from './config-routing.module';
 
-import { InboxPage } from './inbox.page';
+import { ConfigPage } from './config.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InboxPageRoutingModule
+    ConfigPageRoutingModule
   ],
-  declarations: [InboxPage]
+  declarations: [ConfigPage]
 })
-export class InboxPageModule {}
+export class ConfigPageModule {}

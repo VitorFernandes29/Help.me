@@ -22,7 +22,7 @@ export interface Usuario{
   providedIn: 'root'
 })
 export class UsuarioService {
-  private url = 'http://127.0.0.1:81/bd_helpme/usuario.php';
+  private url = 'http://127.0.0.1/helpme/usuario.php';
  //000web funcionando parcialmente
   //private url = 'https://pam21.000webhostapp.com/cliente';
   //infinity Bloqueado
@@ -43,7 +43,6 @@ export class UsuarioService {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   remove(id_usuario: any){
     return this.http.delete(this.url + '/' + id_usuario);
-
   }
   create(usuario: usuarioService.Usuario){
     return this.http.post(this.url, usuario);
@@ -51,5 +50,8 @@ export class UsuarioService {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   update(usuario: usuarioService.Usuario, id_usuario: any){
     return this.http.put(this.url + '/' + id_usuario, usuario);
+  }
+  login(usuario: usuarioService.Usuario){
+    return this.http.request(this.url, usuario.email && usuario.senha);
   }
 }

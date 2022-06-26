@@ -1,5 +1,4 @@
 <ion-content>
-
   <ion-grid class="grid1">
 
       <ion-row class="row1">
@@ -22,7 +21,7 @@
         <ion-title>
           <img src="assets/img/LogoHelpMe.png"/>
         </ion-title>
-
+        <form>
           <ion-grid>
               <ion-row>
                   <ion-col color="dark">
@@ -34,12 +33,12 @@
                       <ion-list>
                           <ion-item>
                               <ion-icon name="person" class="icon-login"></ion-icon>
-                              <ion-input name="user" type="text" required placeholder="email"></ion-input>
+                              <ion-input type="email" [(ngModel)]="dados.email" [ngModelOptions]="{standalone: true}" placeholder="Email"></ion-input>
                           </ion-item>
                           <br />
                           <ion-item>
                               <ion-icon name="lock-closed" class="icon-login"></ion-icon>
-                              <ion-input name="password" type="password" required placeholder="Senha"></ion-input>
+                              <ion-input type="password" href="home" [(ngModel)]="dados.senha" [ngModelOptions]="{standalone: true}" placeholder="Senha"></ion-input>
                           </ion-item>
 
                       </ion-list>
@@ -47,10 +46,8 @@
               </ion-row>
               <ion-row>
                   <ion-col>
-                      <ion-button tab="entrar" href="home/tab1" type="submit" fill="solid" expand="full" color="black">
-                          Entrar
-                      </ion-button>
-                  </ion-col>
+                      <ion-button tab="entrar" type="submit" click="logar()">Logar</ion-button>
+                    </ion-col>
               </ion-row>
               <ion-row>
                   <ion-col>
@@ -62,7 +59,9 @@
                       </ion-label>
                   </ion-col>
               </ion-row>
-          </ion-grid>
+          </ion-grid>]
+        </form>
       </div>
   </ion-slide>
 </ion-content>
+

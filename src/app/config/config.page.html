@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-title>
+    <img src="assets/img/LogoHelpMe.png"/>
+  </ion-title>
+</ion-header>
+
+<ion-content>
+  <br><br><br><br><br><br><br> <br><br><br><br><br><br><br>
+    <ion-slide>
+      <div id="contaier-atualizar">
+        <h1>
+          <h1>Atualizar dados pessoais</h1>
+        </h1>
+        <form>
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+
+                      <ion-card class="card-perfil">
+                        <img src="assets/img/perfil.jpg"> <br>
+                        <ion-button>Selecionar foto</ion-button>
+                      </ion-card>
+
+                      <ion-list>
+                        <ion-item class="here" slot="start">
+                          <ion-label position="floating" required>Nome:</ion-label>
+                          <ion-input type="text" name="nome"></ion-input>
+                        </ion-item>
+
+                        <ion-item class="here" slot="start">
+                          <ion-label position="floating" required>Digite o CPF / CNPJ:</ion-label>
+                          <ion-input type="number"  name="cpf"></ion-input>
+                        </ion-item>
+
+                        <ion-item class="here" slot="start">
+                          <ion-label>Data de nascmento:</ion-label>
+                          <ion-input type="date" name="nasc"></ion-input>
+                        </ion-item>
+
+                        <ion-item class="here" slot="start">
+                          <ion-label position="floating" required>Area de Interesse:</ion-label>
+                          <ion-input type="text"  name="interesse"></ion-input>
+                        </ion-item>
+
+                        <ion-item class="here" slot="start">
+                          <ion-label position="floating" required9>Cidade / Estado</ion-label>
+                          <ion-input type="text"  name="cidade"></ion-input>
+                        </ion-item>
+
+                        <ion-item class="here" slot="start">
+                          <ion-label position="floating" required9>Genero:</ion-label>
+                          <ion-input type="text"  name="genero"></ion-input>
+                        </ion-item>
+
+                        <ion-item class="here" slot="start">
+                          <ion-label position="floating" required>Email:</ion-label>
+                          <ion-input type="email" name="email"></ion-input>
+                        </ion-item>
+
+                        <ion-list>
+                        <h2>Ultiliza alguma rede social? Gostaria de nós passar?</h2>
+                        <ion-item class="here" slot="start">
+                          <ion-label position="floating" required>Redes sociais</ion-label>
+                          <ion-input type="text" name="instagram">Instagram:</ion-input>
+                          <ion-input type="text" name="facenook">Facebook:</ion-input>
+                          <ion-input type="text" name="Linkedin">Linkedin:</ion-input>
+                          <ion-label class="add">Outros</ion-label>
+                          <ion-input type="text" name="outros"></ion-input>
+                        </ion-item>
+                        </ion-list>
+
+                        <ion-item class="here" slot="start">
+                          <ion-label position="floating" required>Senha:</ion-label>
+                          <ion-input type="password" name="senha"></ion-input>
+
+                        </ion-item>
+
+                        <ion-item class="here" slot="start">
+                          <ion-label position="floating">Confirme a senha:</ion-label>
+                          <ion-input  type="password" required></ion-input>
+                        </ion-item>
+
+
+                      </ion-list>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-button tab="entrar" type="submit">Atualizar dados</ion-button>
+                    </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-label>
+                        <h4><a href="home/tab1">Voltar ao inicio</a></h4>
+                      </ion-label>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+        </form>
+        <br><br><br><br>
+      </div>
+    </ion-slide>
+</ion-content>

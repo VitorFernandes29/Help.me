@@ -29,13 +29,18 @@ const routes: Routes = [
   {
     path: 'tweet',
     loadChildren: () => import('./components/shared-components.module').then( m => m.SharedComponentsModule)
-  },  {
+  },
+  {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
   {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'config',
+    loadChildren: () => import('./config/config.module').then( m => m.ConfigPageModule)
   },
 
 

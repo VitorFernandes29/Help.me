@@ -1,9 +1,8 @@
-import { UsuarioService } from './../servico/usuario.service';
-import {  Usuario } from './../api.service';
 import { Component, OnInit, NgModule, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { Cliente, ClienteService } from '../servico/cliente.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -27,7 +26,8 @@ export class CadastroPage implements OnInit{
 
     constructor(
     private modalCtrl: ModalController,
-    private service: ClienteService
+    private service: ClienteService,
+    private route: Router
     ) { }
 
     ngOnInit() {
@@ -45,6 +45,7 @@ export class CadastroPage implements OnInit{
   if(this.atualizar){
     this.service.update(cliente, this.c.id).subscribe(response =>{
       this.modalCtrl.dismiss(response);
+      this.route.navigateByUrl('/home');
     });
   }else{
     this.service.create(cliente).subscribe(response =>{
@@ -52,7 +53,7 @@ export class CadastroPage implements OnInit{
     });
   }
   }
-  }
+}
 
 
 
