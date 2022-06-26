@@ -33,12 +33,12 @@
                       <ion-list>
                           <ion-item>
                               <ion-icon name="person" class="icon-login"></ion-icon>
-                              <ion-input type="email" [(ngModel)]="dados.email" [ngModelOptions]="{standalone: true}" placeholder="Email"></ion-input>
+                              <ion-input type="email" placeholder="Email" name="email"></ion-input>
                           </ion-item>
-                          <br />
+                          <br/>
                           <ion-item>
                               <ion-icon name="lock-closed" class="icon-login"></ion-icon>
-                              <ion-input type="password" href="home" [(ngModel)]="dados.senha" [ngModelOptions]="{standalone: true}" placeholder="Senha"></ion-input>
+                              <ion-input name="senha" type="password" placeholder="Senha"></ion-input>
                           </ion-item>
 
                       </ion-list>
@@ -46,7 +46,7 @@
               </ion-row>
               <ion-row>
                   <ion-col>
-                      <ion-button tab="entrar" type="submit" click="logar()">Logar</ion-button>
+                      <ion-button href="home">Logar</ion-button>
                     </ion-col>
               </ion-row>
               <ion-row>
@@ -59,7 +59,7 @@
                       </ion-label>
                   </ion-col>
               </ion-row>
-          </ion-grid>]
+          </ion-grid>
         </form>
       </div>
   </ion-slide>
